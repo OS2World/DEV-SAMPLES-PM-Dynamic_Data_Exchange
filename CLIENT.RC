@@ -1,0 +1,71 @@
+ /*
+  $Workfile:   client.rc  $
+  $Revision:   1.1.1.0  $
+  $Date:   09 May 1991 18:11:16  $
+  $Logfile:   W:/dde/client.rcv  $
+  $Author:   mikem  $
+  $Modtime:   09 May 1991 18:07:04  $
+
+  Module Description: resource file for DDE client application
+  contains main menu and one dialog box
+*/
+
+#define INCL_NLS   /* support DBCS os/2 versions flag FCF_DBE_APPSTAT */
+#define INCL_WIN  
+#include <os2.h>
+#include "client.h"
+
+MENU ID_MAINWND
+     {
+     SUBMENU "~DDE",   IDM_DDE
+          {
+          MENUITEM "~Start Conversation...", IDM_STARTCONV
+          MENUITEM "Sto~p Conversation", IDM_STOPCONV,,MIA_DISABLED
+          MENUITEM SEPARATOR
+          MENUITEM "~Request last message", IDM_REQUEST,,MIA_DISABLED
+          MENUITEM "Hot link", IDM_ADVISE,, MIA_DISABLED
+          MENUITEM "End hot link",IDM_ENDADVISE,,MIA_DISABLED
+          MENUITEM SEPARATOR
+          MENUITEM "~About...", IDM_ABOUT
+          }
+     }
+
+/* 
+ *  This dialog box allows the user to set the name of the server and 
+ *  a topic which will be broadcast to all top level frame windows
+ */
+
+DLGTEMPLATE IDD_INIT_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Initiate DDE Conversation", IDD_INIT_DLG, 112, 12, 184, 114, 
+            FS_MOUSEALIGN | WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR | 
+            FCF_DBE_APPSTAT
+    BEGIN
+        LTEXT          "Application", -1, 9, 91, 54, 8, NOT WS_GROUP
+        COMBOBOX       "", ID_SERVER_CBX, 65, 69, 115, 37, CBS_DROPDOWN |WS_GROUP
+        LTEXT          "Topic", -1, 17, 53, 36, 8, NOT WS_GROUP
+        COMBOBOX       "", ID_TOPIC_CBX, 65, 30, 115, 37, CBS_DROPDOWN
+        PUSHBUTTON     "Initiate", IDM_DDE, 23, 7, 40, 14, WS_GROUP
+        PUSHBUTTON     "Cancel", DID_CANCEL, 93, 7, 40, 14, NOT WS_TABSTOP
+    END
+END
+
+
+/* 
+ *  This dialog box displays information about the sample program 
+ */
+
+
+DLGTEMPLATE IDD_ABOUT LOADONCALL MOVEABLE DISCARDABLE
+{
+    DIALOG  "About", IDD_ABOUT, 5, 16, 243, 104, FS_NOBYTEALIGN, FCF_SYSMENU | 
+            FCF_TITLEBAR
+    {
+        CTEXT           "DDE Client V2.0", -1, 24, 85, 180, 8
+        CTEXT           "Sample Dynamic Data Exchange client", -1, 27, 65, 
+                        180, 8
+        CTEXT           "Copyright (C) IBM Personal Systems Developer, 1991", 
+                        -1, 5, 42, 228, 8
+        DEFPUSHBUTTON   "OK", IDM_DDE, 89, 14, 62, 18, WS_GROUP
+    }
+}

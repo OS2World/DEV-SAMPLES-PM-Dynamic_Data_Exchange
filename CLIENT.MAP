@@ -1,0 +1,317 @@
+
+ CLIENT
+
+ Start         Length     Name                   Class
+ 0001:00000000 000001CB3H _TEXT                  CODE 32-bit
+ 0002:00000000 000000041H NULL                   BEGDATA 32-bit
+ 0002:00000044 000000384H _DATA                  DATA 32-bit
+ 0002:000003C8 000000000H XIB                    DATA 32-bit
+ 0002:000003C8 000000000H XI                     DATA 32-bit
+ 0002:000003C8 000000000H XIE                    DATA 32-bit
+ 0002:000003C8 000000000H XPB                    DATA 32-bit
+ 0002:000003C8 000000000H XP                     DATA 32-bit
+ 0002:000003C8 000000000H XPE                    DATA 32-bit
+ 0002:000003C8 000000000H XCB                    DATA 32-bit
+ 0002:000003C8 000000000H XC                     DATA 32-bit
+ 0002:000003C8 000000000H XCE                    DATA 32-bit
+ 0002:000003C8 000000010H CDATA                  DATA 32-bit
+ 0002:000003D8 000000000H CONST                  CONST 32-bit
+ 0002:000003D8 000000008H HDR                    MSG 32-bit
+ 0002:000003E0 000000161H MSG                    MSG 32-bit
+ 0002:00000541 000000013H PAD                    MSG 32-bit
+ 0002:00000554 000000001H EPAD                   MSG 32-bit
+ 0002:00000558 0000001ECH _BSS                   BSS 32-bit
+ 0002:00000744 000000000H XOB                    BSS 32-bit
+ 0002:00000744 000000000H XO                     BSS 32-bit
+ 0002:00000744 000000000H XOE                    BSS 32-bit
+ 0002:00000744 000000204H c_common               BSS 32-bit
+ 0002:00000950 000001000H STACK                  STACK 32-bit
+
+ Origin   Group
+ 0002:0   DGROUP
+ 0000:0   FLAT
+
+ Address       Export                  Alias
+
+ 0001:00000122 ClientWndProc           ClientWndProc
+ 0001:000009BF InitDlgProc             InitDlgProc
+
+  Address         Publics by Name
+
+ 0001:00000C2E       AboutDlgProc
+ 0001:00000122       ClientWndProc
+ 0000:00000000  Imp  DOSALLOCMEM          (DOSCALLS.299)
+ 0000:00000000  Imp  DosAllocSharedMem    (DOSCALLS.300)
+ 0000:00000000  Imp  DosExit              (DOSCALLS.234)
+ 0000:00000000  Imp  DOSEXIT              (DOSCALLS.234)
+ 0000:00000000  Imp  DOSFREEMEM           (DOSCALLS.304)
+ 0000:00000000  Imp  DOSQUERYHTYPE        (DOSCALLS.224)
+ 0000:00000000  Imp  DOSQUERYSYSINFO      (DOSCALLS.348)
+ 0000:00000000  Imp  DOSSETMEM            (DOSCALLS.305)
+ 0000:00000000  Imp  DOSUNWINDEXCEPTION   (DOSCALLS.357)
+ 0000:00000000  Imp  DOSWRITE             (DOSCALLS.282)
+ 0001:000009BF       InitDlgProc
+ 0001:00000B6D       MakeDDEReqSeg
+ 0001:00000970       PaintWindow
+ 0000:00000000  Imp  WinAlarm             (PMWIN.701)
+ 0000:00000000  Imp  WinBeginPaint        (PMWIN.703)
+ 0000:00000000  Imp  WinCreateMsgQueue    (PMWIN.716)
+ 0000:00000000  Imp  WinCreateStdWindow   (PMWIN.908)
+ 0000:00000000  Imp  WinDdeInitiate       (PMWIN.718)
+ 0000:00000000  Imp  WinDdePostMsg        (PMWIN.719)
+ 0000:00000000  Imp  WinDefDlgProc        (PMWIN.910)
+ 0000:00000000  Imp  WinDefWindowProc     (PMWIN.911)
+ 0000:00000000  Imp  WinDestroyMsgQueue   (PMWIN.726)
+ 0000:00000000  Imp  WinDestroyWindow     (PMWIN.728)
+ 0000:00000000  Imp  WinDismissDlg        (PMWIN.729)
+ 0000:00000000  Imp  WinDispatchMsg       (PMWIN.912)
+ 0000:00000000  Imp  WinDlgBox            (PMWIN.923)
+ 0000:00000000  Imp  WinDrawText          (PMWIN.913)
+ 0000:00000000  Imp  WinEndPaint          (PMWIN.738)
+ 0000:00000000  Imp  WinGetMsg            (PMWIN.915)
+ 0000:00000000  Imp  WinInitialize        (PMWIN.763)
+ 0000:00000000  Imp  WinInvalidateRect    (PMWIN.765)
+ 0000:00000000  Imp  WinMessageBox        (PMWIN.789)
+ 0000:00000000  Imp  WinPostMsg           (PMWIN.919)
+ 0000:00000000  Imp  WinQuerySysPointer   (PMWIN.828)
+ 0000:00000000  Imp  WinQueryWindow       (PMWIN.834)
+ 0000:00000000  Imp  WinQueryWindowRect   (PMWIN.840)
+ 0000:00000000  Imp  WinQueryWindowText   (PMWIN.841)
+ 0000:00000000  Imp  WinRegisterClass     (PMWIN.926)
+ 0000:00000000  Imp  WinSendDlgItemMsg    (PMWIN.903)
+ 0000:00000000  Imp  WinSendMsg           (PMWIN.920)
+ 0000:00000000  Imp  WinSetWindowPos      (PMWIN.875)
+ 0000:00000000  Imp  WinSetWindowText     (PMWIN.877)
+ 0000:00000000  Imp  WinTerminate         (PMWIN.888)
+ 0000:00000000  Imp  WinWindowFromID      (PMWIN.899)
+ 0002:00000744       _cbDDEMsg
+ 0002:00000558       _edata
+ 0002:00000950       _end
+ 0002:00000221       _environ
+ 0002:000001D8       _errno
+ 0001:00000E64       _exit
+ 0002:00000054       _fAdvise
+ 0002:00000050       _fConnected
+ 0001:00001228       _free
+ 0002:00000748       _hwndClient
+ 0002:00000940       _hwndDDEserver
+ 0002:0000093C       _hwndFrame
+ 0002:00000944       _hwndMenu
+ 0001:00000D99       _inherit
+ 0001:00001A76       _longjmp
+ 0001:00000010       _main
+ 0001:000017B4       _malloc
+ 0002:0000080C       _szBuf
+ 0002:00000044       _szClientClass
+ 0002:000001BC       __acfinfo
+ 0002:000001AC       __acmdln
+ 0000:00009876  Abs  __acrtmsg
+ 0000:00009876  Abs  __acrtused
+ 0002:00000230       __adbgmsg
+ 0002:000001B0       __aenvptr
+ 0002:000001B8       __aexit_rtn
+ 0002:00000250       __amblksiz
+ 0001:00000D83       __amsg_exit
+ 0002:000001CC       __aseghi
+ 0002:000001CA       __aseglo
+ 0001:00000C6C       __astart
+ 0002:000001B4       __atopsp
+ 0001:00000E7D       __cexit
+ 0002:00000229       __child
+ 0001:00000DE8       __cinit
+ 0001:00000EDB       __ctermsub
+ 0001:00000E87       __c_exit
+ 0002:000001DC       __doserrno
+ 0002:000001EC       __dosmode
+ 0002:000001E4       __dosvermajor
+ 0002:000001E8       __dosverminor
+ 0001:000019D4       __except_handler
+ 0000:00000000  Abs  __except_list
+ 0001:00000E6F       __exit
+ 0002:000001D0       __fac
+ 0001:00000F00       __FF_MSGBANNER
+ 0001:00001886       __flat_malloc
+ 0002:000003C0       __fpecode
+ 0002:000003CC       __fpinit
+ 0001:00000F24       __fptrap
+ 0001:00001A17       __global_unwind
+ 0001:00001274       __heapadd
+ 0001:000016D4       __heapinit
+ 0001:000017A8       __heap_abort
+ 0001:000012A4       __heap_addblock
+ 0001:00001991       __heap_advance_rover
+ 0002:0000023C       __heap_desc
+ 0001:0000119C       __heap_findaddr
+ 0001:00001694       __heap_free_region
+ 0001:000014F4       __heap_grow
+ 0001:000016D5       __heap_grow_emptylist
+ 0001:000015E7       __heap_grow_region
+ 0002:0000074C       __heap_regions
+ 0002:00000254       __heap_regionsize
+ 0001:0000172C       __heap_search
+ 0001:00001932       __heap_split_block
+ 0001:00001A2A       __local_unwind
+ 0002:000001ED       __nfile
+ 0001:0000111C       __NMSG_TEXT
+ 0001:00001146       __NMSG_WRITE
+ 0002:000001DC       __oserr
+ 0002:000001F1       __osfile
+ 0002:000001E4       __osmajor
+ 0002:000001E8       __osminor
+ 0002:000001EC       __osmode
+ 0002:000001E4       __osversion
+ 0002:00000225       __pgmptr
+ 0002:00000205       __pipech
+ 0002:000003C4       __pxcptinfoptrs
+ 0001:00000F30       __setargv
+ 0001:000010A4       __setenvp
+ 0001:00001A50       __setjmp
+ 0001:0000117C       __stdalloc
+ 0002:000001E0       __umaskval
+ 0002:00000258       __XcptActTab
+ 0002:000003BC       __XcptActTabCount
+ 0002:000003B8       __XcptActTabSize
+ 0001:00001AB0       __XcptFilter
+ 0002:00000219       ___argc
+ 0002:0000021D       ___argv
+
+  Address         Publics by Value
+
+ 0000:00000000  Imp  WinMessageBox        (PMWIN.789)
+ 0000:00000000  Imp  WinDefDlgProc        (PMWIN.910)
+ 0000:00000000  Imp  WinCreateMsgQueue    (PMWIN.716)
+ 0000:00000000  Imp  WinDestroyWindow     (PMWIN.728)
+ 0000:00000000  Imp  WinPostMsg           (PMWIN.919)
+ 0000:00000000  Imp  WinGetMsg            (PMWIN.915)
+ 0000:00000000  Imp  WinQueryWindowRect   (PMWIN.840)
+ 0000:00000000  Imp  WinDlgBox            (PMWIN.923)
+ 0000:00000000  Imp  WinInitialize        (PMWIN.763)
+ 0000:00000000  Imp  WinDestroyMsgQueue   (PMWIN.726)
+ 0000:00000000  Imp  WinDispatchMsg       (PMWIN.912)
+ 0000:00000000  Imp  WinSendMsg           (PMWIN.920)
+ 0000:00000000  Imp  DOSFREEMEM           (DOSCALLS.304)
+ 0000:00000000  Imp  WinSendDlgItemMsg    (PMWIN.903)
+ 0000:00000000  Imp  DOSUNWINDEXCEPTION   (DOSCALLS.357)
+ 0000:00000000  Imp  WinDdePostMsg        (PMWIN.719)
+ 0000:00000000  Imp  WinBeginPaint        (PMWIN.703)
+ 0000:00000000  Imp  DOSEXIT              (DOSCALLS.234)
+ 0000:00000000  Imp  DOSQUERYSYSINFO      (DOSCALLS.348)
+ 0000:00000000  Imp  DosExit              (DOSCALLS.234)
+ 0000:00000000  Imp  DOSALLOCMEM          (DOSCALLS.299)
+ 0000:00000000  Imp  DOSSETMEM            (DOSCALLS.305)
+ 0000:00000000  Imp  WinCreateStdWindow   (PMWIN.908)
+ 0000:00000000  Imp  DOSWRITE             (DOSCALLS.282)
+ 0000:00000000  Imp  WinQueryWindow       (PMWIN.834)
+ 0000:00000000  Imp  DosAllocSharedMem    (DOSCALLS.300)
+ 0000:00000000  Imp  WinInvalidateRect    (PMWIN.765)
+ 0000:00000000  Imp  WinEndPaint          (PMWIN.738)
+ 0000:00000000  Imp  WinDefWindowProc     (PMWIN.911)
+ 0000:00000000  Imp  WinQuerySysPointer   (PMWIN.828)
+ 0000:00000000  Imp  WinRegisterClass     (PMWIN.926)
+ 0000:00000000  Imp  WinSetWindowPos      (PMWIN.875)
+ 0000:00000000  Imp  WinQueryWindowText   (PMWIN.841)
+ 0000:00000000  Imp  DOSQUERYHTYPE        (DOSCALLS.224)
+ 0000:00000000  Imp  WinDismissDlg        (PMWIN.729)
+ 0000:00000000  Abs  __except_list
+ 0000:00000000  Imp  WinWindowFromID      (PMWIN.899)
+ 0000:00000000  Imp  WinTerminate         (PMWIN.888)
+ 0000:00000000  Imp  WinSetWindowText     (PMWIN.877)
+ 0000:00000000  Imp  WinDdeInitiate       (PMWIN.718)
+ 0000:00000000  Imp  WinAlarm             (PMWIN.701)
+ 0000:00000000  Imp  WinDrawText          (PMWIN.913)
+ 0000:00009876  Abs  __acrtmsg
+ 0000:00009876  Abs  __acrtused
+ 0001:00000010       _main
+ 0001:00000122       ClientWndProc
+ 0001:00000970       PaintWindow
+ 0001:000009BF       InitDlgProc
+ 0001:00000B6D       MakeDDEReqSeg
+ 0001:00000C2E       AboutDlgProc
+ 0001:00000C6C       __astart
+ 0001:00000D83       __amsg_exit
+ 0001:00000D99       _inherit
+ 0001:00000DE8       __cinit
+ 0001:00000E64       _exit
+ 0001:00000E6F       __exit
+ 0001:00000E7D       __cexit
+ 0001:00000E87       __c_exit
+ 0001:00000EDB       __ctermsub
+ 0001:00000F00       __FF_MSGBANNER
+ 0001:00000F24       __fptrap
+ 0001:00000F30       __setargv
+ 0001:000010A4       __setenvp
+ 0001:0000111C       __NMSG_TEXT
+ 0001:00001146       __NMSG_WRITE
+ 0001:0000117C       __stdalloc
+ 0001:0000119C       __heap_findaddr
+ 0001:00001228       _free
+ 0001:00001274       __heapadd
+ 0001:000012A4       __heap_addblock
+ 0001:000014F4       __heap_grow
+ 0001:000015E7       __heap_grow_region
+ 0001:00001694       __heap_free_region
+ 0001:000016D4       __heapinit
+ 0001:000016D5       __heap_grow_emptylist
+ 0001:0000172C       __heap_search
+ 0001:000017A8       __heap_abort
+ 0001:000017B4       _malloc
+ 0001:00001886       __flat_malloc
+ 0001:00001932       __heap_split_block
+ 0001:00001991       __heap_advance_rover
+ 0001:000019D4       __except_handler
+ 0001:00001A17       __global_unwind
+ 0001:00001A2A       __local_unwind
+ 0001:00001A50       __setjmp
+ 0001:00001A76       _longjmp
+ 0001:00001AB0       __XcptFilter
+ 0002:00000044       _szClientClass
+ 0002:00000050       _fConnected
+ 0002:00000054       _fAdvise
+ 0002:000001AC       __acmdln
+ 0002:000001B0       __aenvptr
+ 0002:000001B4       __atopsp
+ 0002:000001B8       __aexit_rtn
+ 0002:000001BC       __acfinfo
+ 0002:000001CA       __aseglo
+ 0002:000001CC       __aseghi
+ 0002:000001D0       __fac
+ 0002:000001D8       _errno
+ 0002:000001DC       __doserrno
+ 0002:000001DC       __oserr
+ 0002:000001E0       __umaskval
+ 0002:000001E4       __osversion
+ 0002:000001E4       __osmajor
+ 0002:000001E4       __dosvermajor
+ 0002:000001E8       __dosverminor
+ 0002:000001E8       __osminor
+ 0002:000001EC       __dosmode
+ 0002:000001EC       __osmode
+ 0002:000001ED       __nfile
+ 0002:000001F1       __osfile
+ 0002:00000205       __pipech
+ 0002:00000219       ___argc
+ 0002:0000021D       ___argv
+ 0002:00000221       _environ
+ 0002:00000225       __pgmptr
+ 0002:00000229       __child
+ 0002:00000230       __adbgmsg
+ 0002:0000023C       __heap_desc
+ 0002:00000250       __amblksiz
+ 0002:00000254       __heap_regionsize
+ 0002:00000258       __XcptActTab
+ 0002:000003B8       __XcptActTabSize
+ 0002:000003BC       __XcptActTabCount
+ 0002:000003C0       __fpecode
+ 0002:000003C4       __pxcptinfoptrs
+ 0002:000003CC       __fpinit
+ 0002:00000558       _edata
+ 0002:00000744       _cbDDEMsg
+ 0002:00000748       _hwndClient
+ 0002:0000074C       __heap_regions
+ 0002:0000080C       _szBuf
+ 0002:0000093C       _hwndFrame
+ 0002:00000940       _hwndDDEserver
+ 0002:00000944       _hwndMenu
+ 0002:00000950       _end
+
+Program entry point at 0001:0C6C

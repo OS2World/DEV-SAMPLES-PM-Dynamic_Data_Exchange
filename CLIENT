@@ -1,0 +1,44 @@
+#
+#  $Workfile:   client  $
+#  $Revision:   1.1.1.0  $
+#  $Date:   09 May 1991 18:08:48  $
+#
+#    To build this program, use any Unix compatible make.exe or
+#    use PolyMake V3.3. ([c:\] make -f client)
+#    cp = a file copy program (COPY is an internal CMD.EXE, and
+#    won't work with the .NOSHELL directive
+#
+#  Copyright (c) Personal Systems Developer
+#  IBM Corporation, 1991
+
+# Run all programs as child processes, don't invoke the command shell first
+.NOSHELL
+
+# Specify 32 bit Compiler options
+COPTS = -c  -W4 -G3s -Zil -Owise  -DLINT_ARGS -DINCL_32
+
+# Specify 32 bit linker options
+LOPTS = /NOD /NOI /CO /MAP /CO 
+
+# Specify what program libraries to use
+LIBS = libc os2386 
+
+# The default target to build is "client.exe" and it depends on a bin and resource file
+client.exe :  client.bin client.res 
+   cp client.bin client.exe
+   rc client.res client.exe
+
+# Client.bin is dependent upon the object and def file
+client.bin : client.obj client.def
+   link386 $(LOPTS) client.obj,client.bin,,$(LIBS), client;
+
+# the object file depends on the source file and includes (h)
+client.obj : client.c  client.h pmutils.h
+   cl386 $(COPTS) client.c
+
+# the resource file depends on the rc script and includes
+client.res : client.rc client.h
+   rc -r client.rc
+
+# end $Workfile:   client  $
+

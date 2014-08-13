@@ -1,0 +1,33 @@
+#
+#  $Workfile:   server  $
+#  $Revision:   1.1.1.0  $
+#  $Date:   09 May 1991 18:11:02  $
+#
+#    To build this program, use any Unix compatible make.exe or
+#    use PolyMake V3.3. ([c:\] make -f server)
+#
+#  Copyright (c) Personal Systems Developer
+#  IBM Corporation, 1991
+
+# Run all programs as child processes, don't invoke the command shell first
+.NOSHELL
+
+# Specify 32 bit Compiler options
+COPTS = -c  -W4 -G3s -Zil -Owise  -DLINT_ARGS -DINCL_32
+
+# Specify 32 bit linker options
+LOPTS = /NOD /NOI /CO /MAP /CO 
+
+# Specify what program libraries to use
+LIBS = libc os2386 
+
+# The target to build is "server.exe" which depends on the object and def files
+server.exe :  server.obj server.def
+   link386 $(LOPTS) server.obj,,,$(LIBS), server;
+
+# The target "server.obj" is dependent on the C source and include (h) files
+server.obj : server.c server.h pmutils.h
+   cl386 $(COPTS) server.c
+
+# end $Workfile:   server  $
+

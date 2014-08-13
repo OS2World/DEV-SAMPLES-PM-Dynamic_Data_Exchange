@@ -1,0 +1,21 @@
+;  $Workfile:   server.def  $
+;  $Revision:   1.1.1.0  $
+;  $Date:   09 May 1991 18:09:14  $
+;  $Logfile:   W:/dde/server.dev  $
+;  $Author:   mikem  $
+;  $Modtime:   09 May 1991 18:07:04  $
+;
+;   Sample Server DDE application 
+;   Copyright (C) Personal Systems Developer, IBM Corporation 1991
+;   Author: Michael R. MacFaden
+;   Internet: macfaden@paloic1.vnet.ibm.com
+
+NAME SERVER WINDOWAPI NEWFILES
+
+DESCRIPTION    'Personal Systems Developer Sample Code Copyright (C) IBM Corp. 1991'
+PROTMODE
+HEAPSIZE        8096
+STACKSIZE       4096
+EXPORTS
+   ClientWndProc
+

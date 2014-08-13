@@ -1,0 +1,22 @@
+;  $Workfile:   client.def  $
+;  $Revision:   1.1.1.0  $
+;  $Date:   09 May 1991 18:10:44  $
+;  $Logfile:   W:/dde/client.dev  $
+;  $Author:   mikem  $
+;  $Modtime:   09 May 1991 18:07:04  $
+;
+;   Sample Client DDE application 
+;   Copyright (C) Personal Systems Developer, IBM Corporation 1991
+;   Author: Michael R. MacFaden
+;   Internet: macfaden@paloic1.vnet.ibm.com
+
+NAME CLIENT WINDOWAPI NEWFILES
+
+DESCRIPTION    'Personal Systems Developer Sample Code Copyright (C) IBM Corp. 1991'
+PROTMODE
+HEAPSIZE        8096
+STACKSIZE       4096
+EXPORTS
+   ClientWndProc
+   InitDlgProc
+
